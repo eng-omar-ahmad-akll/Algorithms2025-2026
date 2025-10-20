@@ -1,0 +1,25 @@
+"""
+Selection sort.py
+Author: omar_ahmed_ahmed_akl(231031)_met_student_lvl(3)
+Run: task_one_section_ENG:basmala_Selection_sort_ALGO.py
+"""
+
+# Selection Sort Algorithm
+def selectionSort(array, size):
+    for i in range(size):
+        #cliam that first index is sorted
+        min_index = i
+        #search for the smollest of non sorted arrey
+        for j in range(i + 1, size):
+            if array[j] < array[min_index]:
+                min_index = j
+        #swaping
+        array[i], array[min_index] = array[min_index], array[i]
+
+
+
+arr = [-2, 45, 0, 11, -9, 88, -97, -202, 747, 88, 77]
+print("Before the Algo: ", arr)
+size = len(arr)
+selectionSort(arr, size)
+print("After the Algo: ", arr)
